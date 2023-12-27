@@ -171,6 +171,7 @@
       </div>
       <style>
         #search > form {
+          display:inline-flex;
           width: 700px;
           height: 60px;
           margin: 0 auto;
@@ -200,7 +201,15 @@
           outline: none;
         }
         #search-right{
-          display: inline-block;
+          flex: 1;
+          display: flex;
+          align-items: stretch;
+          justify-content: center;
+        }
+        #search-keybord,#search-recent,#search-button{
+          background: transparent;
+          border: none;
+          cursor: pointer;
         }
         #search-keybord::before{
           content: "";
@@ -240,6 +249,7 @@
           </a>
           <label for="search-input" class="blind">검색어 입력</label>
           <input id="search-input" type="text" placeholder="검색어를 입력하세요.">
+          <div id="search-right">
             <button href="#" id="search-keybord">
               <span class="blind">입력도구</span>
             </button>
@@ -249,6 +259,8 @@
             <button href="#" id="search-button">
               <span class="blind">검색</span>
             </button>
+          </div>
+            
         </form>
       </div>
       <div id="nav"></div>
