@@ -83,7 +83,6 @@
     #wrap-center {
       width:1280px; 
       display: inline-block;
-      background-color: yellow;
     }
     #header {
       text-align: left;
@@ -188,6 +187,20 @@
           margin-right: 12;
           height: 100%;
           padding-left: 10px;
+          position: relative;
+        }
+        #search-svg::after{
+          display: none;
+        }
+        #search > form:focus-within #search-svg::after{
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 20px;
+          background-color: #e4e4e4;
+          display: inline-block;
+          right: 0;
+          top: 20px;
         }
         #search-svg svg{
           width: 24px;
