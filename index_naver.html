@@ -179,6 +179,9 @@
           border-radius: 33px;
           text-align: left;
         }
+        #search > form:hover{
+          box-shadow: 0 2px 4px 0 rgba(0,0,0,.12);
+        }
         #search-svg{
           display: inline-block;
           width: 68px;
@@ -199,6 +202,12 @@
           font-weight: bold;
           border: none;
           outline: none;
+        }
+        #search-input::placeholder{
+          color: white ;
+        }
+        #search-input:focus::placeholder{
+          color: rgb(230,230,230);
         }
         #search-right{
           flex: 1;
@@ -221,6 +230,9 @@
           width: 24px;
           height: 14px
         }
+        #search-keybord:hover::before{
+          filter: brightness(0.7);
+        }
         #search-recent::before{
           content: "";
           display: block;
@@ -230,6 +242,9 @@
           background-repeat: no-repeat;
           width: 10px;
           height: 6px;
+        }
+        #search-button{
+          padding: 17px 27px 16px 10px;
         }
         #search-button::before{
           content: "";
