@@ -85,8 +85,17 @@
     #search form{
       display: flex;
       align-items: center;
-      
     }
+      #search-input {
+        flex-grow: 1;
+        border: none;
+        height: 20px; 
+        background-color: #464B4F; 
+        padding: 5px; 
+        border-radius: 5px; 
+        margin-right: 5px; 
+      }
+
     #sign {
       display: flex;
       width: 60px;
@@ -109,7 +118,7 @@
 
 
     #sign > button {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       background-color:transparent; 
       border: 1px solid white;
       border-radius: 8px;
@@ -120,6 +129,37 @@
     #sign > button > span {
       color: white; 
     }
+    #sign {
+      display: flex;
+      width: 200px; /* 키우고자 하는 너비로 조절 */
+      height: 60px;
+      margin-left: 60px;
+    }
+
+    #sign > a,
+    #sign > button {
+      width: 90%; 
+      height: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border-color: #F2F2F2;
+      text-decoration: none;
+      color: #F2F2F2;
+      white-space: nowrap;
+    }
+    #form{
+      background-color: #464B4F;
+      border-radius: 5px;
+    }
+    #search-recent{
+      background-color: transparent;
+      border-radius: 5px;
+      border: 1px solid #F2F2F2;
+      color: #F2F2F2;
+    }
+
 
     #main {
       margin-top: 51px;
@@ -227,8 +267,7 @@
       </ul>
     </nav>
     <div id="search">
-      <form action="">
-        <a href="#"></a>
+      <form id="form" action="">
         <input id="search-input" type="text" placeholder="Search Gitb">
         <div id="search-right">
           <button href="#" id="search-recent"><span>/</span></button>
