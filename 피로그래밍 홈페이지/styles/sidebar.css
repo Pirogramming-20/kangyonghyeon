@@ -2,13 +2,26 @@
   .sidebar {
     width: 300px;
     height: calc(100vh - var(--header-height));
-    background-color: gray;
+    background-color: #333333;
     position: fixed;
     top: var(--header-height);
     right: -300px;
     transition: 0.3s;
+    z-index: 1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    
   }
   #hamburger-icon input:checked ~ .sidebar {
     right: 0;
+  }
+  .sidebar>ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 80px 40px;
+  }
+  .sidebar>ul>li{
+    padding: 20px 0;
   }
 }
