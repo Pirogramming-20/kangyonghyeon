@@ -10,7 +10,7 @@
     z-index: 1;
     font-size: 1.8rem;
     font-weight: bold;
-    
+  
   }
   #hamburger-icon input:checked ~ .sidebar {
     right: 0;
@@ -23,5 +23,13 @@
   }
   .sidebar>ul>li{
     padding: 20px 0;
+  }
+  .leftside{
+    width: 400px;
+    height: 400px;
+    border: 1px solid aqua;
+  }
+  .side{
+    display: flex;
   }
 }
