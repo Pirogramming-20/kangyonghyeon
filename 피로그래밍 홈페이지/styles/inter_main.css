@@ -1,0 +1,17 @@
+main{
+  width: min(100%,1200px);
+  margin: auto;
+  padding: 0 var(--offset);
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+@media screen and (max-width:850px) {
+  main{
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+}
+@media screen and (max-width:600px) {
+  
+  
+}
