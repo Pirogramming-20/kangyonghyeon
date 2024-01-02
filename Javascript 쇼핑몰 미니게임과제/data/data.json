@@ -9,10 +9,10 @@
     },
     {
       "type": "tshirt",
-      "gender": "female",
+      "gender": "male",
       "size": "large",
-      "color": "pink",
-      "image": "../img/pink_t.png"
+      "color": "yellow",
+      "image": "../img/yellow_t.png"
     },
     {
       "type": "tshirt",
