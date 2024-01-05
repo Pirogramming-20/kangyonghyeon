@@ -23,6 +23,7 @@
 
 6단계:  배스킨라빈스31 게임은 참여자가 번갈아가며 숫자를 부른다. 게임이 끝날 때까지 playerA와 playerB에게 번갈아가며 부를 숫자의 개수를 입력받는 코드를 작성하여라.
 
+7단계: 게임이 끝났을 때, 누가 이겼는지 화면에 출력하여라.
 '''
 num=0
 while True:
@@ -40,6 +41,7 @@ while True:
     for i in range(num+1,num+x+1):
         print('playerA :',i)
         if i==31:
+            print('playerB win!')
             break
         
         
@@ -58,6 +60,7 @@ while True:
     for i in range(num+1,num+x+1):
         print('playerB :',i)
         if i==31:
+            print('playerA win!')
             break
     
     num+=x
