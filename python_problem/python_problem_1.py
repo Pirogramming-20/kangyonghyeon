@@ -24,43 +24,37 @@
 6단계:  배스킨라빈스31 게임은 참여자가 번갈아가며 숫자를 부른다. 게임이 끝날 때까지 playerA와 playerB에게 번갈아가며 부를 숫자의 개수를 입력받는 코드를 작성하여라.
 
 7단계: 게임이 끝났을 때, 누가 이겼는지 화면에 출력하여라.
+
+8단계: 6단계까지 중복되는 코드를 찾아 함수로 만들어라. 이때, 함수 이름은 brGame으로 한다.
 '''
-num=0
-while True:
-    if num>30:
-        break
-    while True:
+def brGame():
+    num = 0
+    current_player = "A"
+
+    while num <= 30:
         try:
-            x=int(input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :'))
-            if x<1 or x >3:
-                print('1,2,3 중 하나를 입력하세요')
+            x = int(input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능)'))
+            if x < 1 or x > 3:
+                print('1, 2, 3 중 하나를 입력하세요')
                 continue
-            break    
-        except:
+        except ValueError:
             print('정수를 입력하세요')
-    for i in range(num+1,num+x+1):
-        print('playerA :',i)
-        if i==31:
-            print('playerB win!')
-            break
-        
-        
-    num+=x
-    if num>30:
-        break
-    while True:
-        try:
-            x=int(input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :'))
-            if x<1 or x >3:
-                print('1,2,3 중 하나를 입력하세요')
-                continue
-            break    
-        except:
-            print('정수를 입력하세요')
-    for i in range(num+1,num+x+1):
-        print('playerB :',i)
-        if i==31:
-            print('playerA win!')
-            break
-    
-    num+=x
+            continue
+
+        for i in range(num + 1, num + x + 1):
+            print(f'플레이어 {current_player} :', i)
+            if i == 31:
+                if current_player =="A":
+                    winner="B"
+                else:
+                    winner="A"
+                print(f'player{winner} win!')
+                return
+
+        num += x
+        if current_player == "A":
+            current_player = "B" 
+        else:
+            current_player="A"
+
+brGame()
