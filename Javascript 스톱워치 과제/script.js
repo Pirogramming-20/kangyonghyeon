@@ -17,8 +17,6 @@ const updateDisplay = () => {
   if (startTime) {
     const currentTime = new Date().getTime();
     elapsedTime = currentTime - startTime;
-    console.log('startTime:', startTime);
-    console.log('elapsedTime:', elapsedTime);
     time.textContent = formatTime(elapsedTime);
   }
 };
@@ -29,7 +27,6 @@ const formatTime = (milliseconds) => {
   const seconds = totalSeconds % 60;
   millisecondsDigits = String(milliseconds % 1000).padStart(3, '0');
   formattedSeconds = String(seconds).padStart(2, '0');
-  console.log(millisecondsDigits);
   return `${formattedSeconds}:${millisecondsDigits.substring(0, 2)}`;
 };
 
