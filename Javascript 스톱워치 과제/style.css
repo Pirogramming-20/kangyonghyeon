@@ -1,0 +1,104 @@
+:root{
+  --color-gray: #B8BFB8;
+  --btn-gray:#E6E6E6;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.img{
+  width: 24px;
+  height: 24px;
+
+}
+.name{
+  margin-bottom: 10px;
+  align-items: center;
+  font-size: 20px;
+  
+}
+.main{
+  background-color:var(--color-gray) ;
+  font-size:40px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 175px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+
+}
+#time{
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px 80px;
+}
+.recordHead{
+  background-color: var(--color-gray);
+  width: 330px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 15px 15px 0 0;
+}
+
+.record >ul>li{
+  background-color: white;
+  width :330px; 
+  font-size: 25px;
+  text-align: center;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#recordbtn1,.recordbtn2,.recordbtn3,#recordbtnA{
+  width: 26px;
+  height: 26px;
+  border: 0;
+  background-color: transparent;
+
+}
+
+.time-bottm{
+  margin-top: 10px;
+}
+
+
+#recordbtn1,#recordbtnA{
+  background-image: url(./image/원.png);
+  background-size: cover;
+  cursor: pointer;
+}
+.recordbtn2{
+  background-image: url(./image/쓰레기통.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+#btnS,#btnP,#btnR{ 
+  background-color: var(--btn-gray);
+  border: 0;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#rlist >li.checked >#recordbtn1::before,.recordHead>button.checked::before{
+  content: '';
+  background-image: url(./image/체크.png);
+  width: 15px;
+  height: 15px;
+  display: block;
+  background-size: cover;
+}
+
+
