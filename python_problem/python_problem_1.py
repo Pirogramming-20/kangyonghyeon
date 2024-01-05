@@ -26,35 +26,41 @@
 7단계: 게임이 끝났을 때, 누가 이겼는지 화면에 출력하여라.
 
 8단계: 6단계까지 중복되는 코드를 찾아 함수로 만들어라. 이때, 함수 이름은 brGame으로 한다.
+
+9단계: computer와 대결하는 배스킨라빈스31 게임을 만들어보자. 아래의 내용을 만족하도록 코드를 작성하여라.
 '''
+import random
 def brGame():
     num = 0
-    current_player = "A"
+    current_player = "computer"
 
     while num <= 30:
         try:
-            x = int(input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능)'))
-            if x < 1 or x > 3:
-                print('1, 2, 3 중 하나를 입력하세요')
-                continue
+            if current_player=="computer":
+                x=random.randint(1,3)
+            else:
+                x = int(input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :'))
+                if x < 1 or x > 3:
+                    print('1, 2, 3 중 하나를 입력하세요')
+                    continue
         except ValueError:
             print('정수를 입력하세요')
             continue
 
         for i in range(num + 1, num + x + 1):
-            print(f'플레이어 {current_player} :', i)
+            print(f'{current_player} :', i)
             if i == 31:
-                if current_player =="A":
-                    winner="B"
+                if current_player =="computer":
+                    winner="player"
                 else:
-                    winner="A"
-                print(f'player{winner} win!')
+                    winner="computer"
+                print(f'{winner} win!')
                 return
 
         num += x
-        if current_player == "A":
-            current_player = "B" 
+        if current_player == "computer":
+            current_player = "player" 
         else:
-            current_player="A"
+            current_player="computer"
 
 brGame()
