@@ -15,8 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    #관리자 페이지로 연결
+    path('',include('blog.urls')),
+    # 8000번 포트에 들어오는 모든 접속 요청을 blog.url로 전송한다
 ]
