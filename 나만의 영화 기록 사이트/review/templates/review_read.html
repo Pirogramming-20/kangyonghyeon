@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="read_head">
+    <div class="read_title">{{review.title}}</div>
+    <div class="read_btn">
+      <a href="/review/{{review.id}}/update">수정</a>
+      <form  action="/review/{{review.id}}/delete" method="post">
+        {% csrf_token %}
+        <input id="delete" type="submit" value="삭제">
+      </form>
+    </div>
+  </div>
+  <div class="read_mid">
+    <img src="{{review.poster.url}}" alt="포스터">
+    <div class="read_info">
+      <div>개봉연도 <span>{{review.year}}</span></div>
+      <div>김독 <span>{{review.director}}</span></div>
+      <div> 주연 <span>{{review.actor}}</span></div>
+      <div>장르 <span>{{review.genre}}</span></div>
+      <div>별점 <span>{{review.star}}</span></div>
+      <div>러닝타임 <span>{{hour}}시간 {{minutes}}분<span></div>
+    </div>
+  </div>
+  <div class="read_review">{{review.review}}</div>
+{% endblock %}

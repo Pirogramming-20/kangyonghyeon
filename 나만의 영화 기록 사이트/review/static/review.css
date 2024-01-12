@@ -1,0 +1,122 @@
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  border-bottom: 1px solid gray;
+  font-size: 20px;
+}
+a {
+  text-decoration: none; 
+  color: inherit;
+  cursor: pointer;
+}
+
+.header>h1> a> span{
+  color: red;
+  font-weight: bold;
+}
+
+.movie{
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+}
+.poster{
+  margin: 20px;
+}
+.info{
+  padding: 0 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap :10px;
+}
+.info>div>span{
+  color: black;
+}
+.title{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 40px;
+  gap: 15px;
+  background-color: lightgrey;
+  padding: 10px 30px;
+}
+#head{
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid gray;
+}
+#head > #h_p{
+  padding: 0 10px;
+  color: red;
+  font-weight: bold;
+}
+.save{
+  position: absolute;
+  right: 10px;
+
+}
+.bottom{
+  position: relative;
+  
+}
+.list_container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 30px 30px;
+  gap: 20px;
+  margin: auto;
+  width: min(1200px,100%);
+}
+
+.read_head{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px;
+  align-items: center;
+}
+.read_btn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#delete{
+  all: unset;
+  color: #444444;
+}
+.read_title{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+.read_mid{
+  margin: 20px;
+  display: flex;
+  gap:15px;
+  background-color: lightgray;
+  padding: 20px;
+}
+.read_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.read_review{
+  background-color: lightgray;
+  margin: 20px;
+  padding: 10px;
+  font-weight: bold;
+}
+.read_info > div> span{
+  color: black;
+}

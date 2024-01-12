@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'review.css' %}">
+
+
+{% block content %}
+  <form  action="/review/create" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form">
+      <div id="head"><div id="h_p">Movie</div> review</div>
+      <input name="title" placeholder="제목"  /> <br/>
+      <input name="year" placeholder="개봉연도" /> <br/>
+      <input name="genre" placeholder="장르" />
+      <input name="star" placeholder="별점" />
+      <input name="time" placeholder="러닝타임" />
+      <textarea name="review" cols="30" rows="10" placeholder="리뷰"></textarea>
+      <input name="director" placeholder="감독" />
+      <input name="actor" placeholder="배우" />
+      <div class="bottom">
+      <input name="poster" type="file"/>
+        <input class="save" type="submit" value="save">
+      </div>
+    </div>
+  </form>
+{% endblock %}

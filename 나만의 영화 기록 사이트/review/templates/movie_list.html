@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'review.css' %}">
+
+{% block content %}
+    <div class="list_container">
+      {% for movie in movies %}
+        <div class="movie">
+          <img class="poster" src="{{movie.poster.url}}" alt="포스터">
+          <div class="info">
+            <a href="/review/{{movie.id}}"><div class="title">{{movie.title}}</div></a>
+            <div>개봉연도 <span>{{movie.year}}</span></div>
+            <div>장르 <span>{{movie.genre}}</span></div>
+            <div>별점 <span>{{movie.star}}</span></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+{% endblock %}
+
