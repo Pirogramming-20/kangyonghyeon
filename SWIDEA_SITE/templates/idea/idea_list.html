@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{%block content%}
+  <h3>Idea List</h3>
+  <div>나의 아이디어를 잊지말고 기록해보세요</div>
+  {% for idea in ideas %}
+    <container class='idea_container'>
+      <img src='{{idea.image.url}}'>
+      <button class='like'></button>
+    </container>
+    <div><a href="{% url 'idea:detail' idea.pk %}">{{idea.title}}</a></div>
+    <div>{{idea.content}}</div>
+    <div>{{idea.interest}}</div>
+    <div>{{idea.tool}}</div>
+  {% endfor %}
+{% endblock %}
